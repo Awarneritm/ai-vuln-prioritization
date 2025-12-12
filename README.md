@@ -18,3 +18,24 @@ cd ai-vuln-prioritization
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 3.  Install dependencies:textpip install -r requirements.txt
+
+How to Run the Project
+
+Prepare Data:
+Download full CVEfixes from https://www.kaggle.com/datasets/girish17019/cvefixes-vulnerable-and-fixed-code.
+Run preprocessing: python src/data_prep.py --data_path data/raw/cvefixes --output_path data/processed
+
+Train Model:
+python src/train.py --data_dir data/processed --epochs 50 --lr 0.001 --output_model models/gnn_model.pth
+
+Run Inference:
+python src/infer.py --model_path models/gnn_model.pth --input_cve example_cve.json --output results/priorities.json
+
+Generate Explanations:
+python src/explain.py --model_path models/gnn_model.pth --input results/priorities.json --output results/justifications/
+
+Evaluate:
+Results will be saved in results/metrics.csv and graphs/.
+
+
+For questions, contact aaron.warner@trojans.dsu.edu.
