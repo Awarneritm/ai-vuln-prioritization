@@ -8,3 +8,11 @@ Environment Specs
 Python: 3.12
 OS: Tested on Ubuntu 22.04 and Windows 11
 Hardware: GPU recommended (NVIDIA with CUDA 12.1) for GNN training; fallback to CPU.
+
+Installation Instructions
+
+Clone the repository:textgit clone https://github.com/aaronwarner/ai-vuln-prioritization.git
+cd ai-vuln-prioritization
+Create a virtual environment (Python 3.12 recommended):textpython -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+Install dependencies:textpip install -r requirements.txt
