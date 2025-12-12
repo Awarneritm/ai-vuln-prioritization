@@ -1,0 +1,38 @@
+# Final model configuration – December 12, 2025
+seed: 42
+dataset:
+  name: cvefixes_subset
+  samples: 10000
+  split: [0.8, 0.1, 0.1]
+
+gnn:
+  model: GraphSAGE
+  hidden_channels: 256
+  num_layers: 2
+  dropout: 0.3
+  aggr: mean
+  norm: BatchNorm
+
+  train:
+    epochs: 50
+    lr: 0.001
+    weight_decay: 5e-4
+    early_stopping_patience: 7
+    best_val_auc: 0.920
+
+xgboost:
+  objective: reg:squarederror
+  max_depth: 5
+  eta: 0.1
+  n_estimators: 300
+  subsample: 0.9
+
+codebert:
+  model_name: microsoft/codebert-base
+  max_length: 512
+  embedding_dim: 768
+
+final_metrics:
+  test_f1: 0.874
+  test_auc: 0.920
+  priority_correlation: 0.85
