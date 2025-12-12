@@ -19,7 +19,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 3.  Install dependencies:textpip install -r requirements.txt
 
-How to Run the Project
+*How to Run the Project*
 
 Prepare Data:
 Download full CVEfixes from https://www.kaggle.com/datasets/girish17019/cvefixes-vulnerable-and-fixed-code.
