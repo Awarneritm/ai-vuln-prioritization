@@ -1,1 +1,38 @@
-
+metric,model,value,notes
+Accuracy,CVSS-static,0.652,
+Accuracy,Random Forest,0.784,
+Accuracy,GNN (no code embeds),0.821,
+Accuracy,Hybrid GNN + XGBoost,0.905,Best performing model
+Precision,CVSS-static,0.621,
+Precision,Random Forest,0.753,
+Precision,GNN (no code embeds),0.805,
+Precision,Hybrid GNN + XGBoost,0.882,
+Recall,CVSS-static,0.584,
+Recall,Random Forest,0.721,
+Recall,GNN (no code embeds),0.789,
+Recall,Hybrid GNN + XGBoost,0.867,
+F1-Score,CVSS-static,0.602,
+F1-Score,Random Forest,0.737,
+F1-Score,GNN (no code embeds),0.797,
+F1-Score,Hybrid GNN + XGBoost,0.874,Main result
+AUC-ROC,CVSS-static,0.680,
+AUC-ROC,Random Forest,0.810,
+AUC-ROC,GNN (no code embeds),0.850,
+AUC-ROC,Hybrid GNN + XGBoost,0.920,Main result
+Priority Correlation (Spearman),CVSS-static,0.620,
+Priority Correlation (Spearman),Hybrid GNN + XGBoost,0.850,+37% improvement over CVSS
+ClaimF1,Hybrid Model,0.950,vs GPT-4o 0.87
+Reference Coverage (RefCov),Hybrid Model,0.900,vs GPT-4o 0.71
+CVSS-Explain Score,Hybrid Model,0.960,vs GPT-4o 0.68
+Hallucination Rate (%),Hybrid Model,1.5,vs GPT-4o 19%
+Human Clarity Score (1–5),Hybrid Model,4.7,Analyst Likert score
+Win Rate vs GPT-4o (human pref %),Hybrid Model,78.0,
+End-to-end Latency (ms),Hybrid Model,720,Target ≤850 ms
+Throughput (tokens/sec),Hybrid Model,102,Target ≥95 tokens/sec
+Peak GPU Memory (GB),Hybrid Model,12.5,Target ≤14 GB
+Ablation: Without CodeBERT embeddings,F1-Score,0.797,-8.7% drop
+Ablation: Without Contextual Layer (XGBoost),Priority Correlation,0.720,-15% drop
+Test Set Size,,10000,80/10/10 split
+Exploitation Labels Source,,EPSS + ExploitDB,
+Date of Experiment,,2025-12-10,
+Author,,Aaron D. Warner
