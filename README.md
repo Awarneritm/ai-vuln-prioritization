@@ -39,3 +39,19 @@ Results will be saved in results/metrics.csv and graphs/.
 
 
 For questions, contact aaron.warner@trojans.dsu.edu.
+
+ai-vuln-prioritization/
+├── src/
+├── data/
+├── results/
+│   ├── metrics.csv
+│   ├── graphs/          (5 PNGs)
+│   └── justifications/  (5 .txt files)
+├── models/                  ← NOW COMPLETE
+│   ├── gnn_exploit_predictor.pth
+│   ├── xgboost_context_prioritizer.json
+│   ├── codebert_tokenizer/
+│   ├── model_config.yaml
+│   ├── training_history.pt
+│   └── README_models.md
+└── requirements.txt
