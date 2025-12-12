@@ -11,7 +11,7 @@ Hardware: GPU recommended (NVIDIA with CUDA 12.1) for GNN training; fallback to 
 
 Installation Instructions
 
-1.  Clone the repository:textgit clone https://github.com/aaronwarner/ai-vuln-prioritization.git
+1.  Clone the repository:textgit clone https://github.com/awarneritm/ai-vuln-prioritization.git
 cd ai-vuln-prioritization
 
 2.  Create a virtual environment (Python 3.12 recommended):textpython -m venv venv
