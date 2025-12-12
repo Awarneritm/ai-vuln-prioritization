@@ -1,0 +1,66 @@
+code
+Source Code
+
+404: Not Found
+5%
+<?php namespace Kanboard\Controller; use Kanboard\Core\Base; use Kanboard\Core\Controller\AccessForbiddenException; use Kanboard\Core\Controller\PageNotFoundException; /** * Base Controller * * @package Kanboard\Controller * @author
+0%
+Other (29717)
+95%
+Valid
+31.2k
+100%
+Mismatched
+0
+0%
+Missing
+26
+0%
+Unique
+23.8k
+Most Common
+404: Not Found
+5%
+language
+Programming language
+
+c
+28%
+Other
+20%
+Other (16440)
+53%
+Valid
+31.2k
+100%
+Mismatched
+0
+0%
+Missing
+0
+0%
+Unique
+48
+Most Common
+c
+28%
+safety
+Safe or vulnerable
+
+2
+
+unique values
+Valid
+31.2k
+100%
+Mismatched
+0
+0%
+Missing
+0
+0%
+Unique
+2
+Most Common
+vulnerable
+50%
